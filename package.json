@@ -1,0 +1,19 @@
+{
+  "name": "framework_ampletime",
+  "version": "1.0.0",
+  "description": "Automation Framework AmpleTime",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noerm177/AmpleTime.git"
+  },
+  "author": "Noe RM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noerm177/AmpleTime/issues"
+  },
+  "homepage": "https://github.com/Noerm177/AmpleTime#readme"
+}
