@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Noerm177/AmpleTime#readme",
   "dependencies": {
     "protractor": "^6.0.0",
-    "typescript":"~3.3.4",
+    "typescript": "~3.3.4",
     "jasmine": "~3.3.1",
     "@types/jasmine": "2.8.7",
     "@types/jasminewd2": "2.0.3"
