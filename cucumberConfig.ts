@@ -1,7 +1,7 @@
 import {Config} from 'protractor';
 
 export let config: Config = {
-    
+
   noGlobals: true,
   directConnect: true,
   // set to "custom" instead of cucumber.
@@ -17,7 +17,7 @@ export let config: Config = {
   cucumberOpts: {
     // require step definitions
     require: [
-      'path/to/step/definitions/**/*.steps.js' // accepts a glob
+      './stepDefinations/*.js' // accepts a glob
     ]
   }
   //seleniumAddress: 'http://localhost:4444/wd/hub',

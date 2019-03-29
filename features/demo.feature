@@ -4,7 +4,7 @@ Feature: Validar las credenciales de ingreso
    Scenario Outline: Quiero ingresar credenciales invalidas
    Given Ingresare a la pagina
    When  Ingresare un "<usuario>" y "<contraseña>" invalidos
-   Then debere ingresar a la pantalla de home
+   Then No debere poder ingresar a la pantalla de home
 
     Examples:
     | usuario | contraseña | 
