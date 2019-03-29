@@ -4,6 +4,8 @@ import {Config} from 'protractor';
 export let config: Config = {
 
   directConnect: true,
+
+  
   //framework: 'jasmine',
   capabilities: {
     browserName: 'chrome'
