@@ -4,7 +4,7 @@ Feature: Validar las credenciales de ingreso
    Scenario Outline: Quiero ingresar credenciales invalidas
    Given Ingresare a la pagina
    When  Ingresare un "<usuario>" y "<contraseña>" invalidos
-   Then No debere poder ingresar a la pantalla de home
+   Then Me mostrara 'Usuario y/o contraseña incorrectas, favor de verificar'
 
     Examples:
     | usuario | contraseña | 
@@ -12,6 +12,7 @@ Feature: Validar las credenciales de ingreso
     | Noerm.123@Yopmail.com  | Hola123  | 
 
    Scenario: Quiero ingresar credenciales validas
-   Given Ingresare a la pagina
-   When  Ingresare un usuario y contraseña validos
-   Then debere ingresar a la pantalla de home
+   Given Ingresare a la pagina con credenciales validas
+   When  Ingresare un usuario "testomator@amplemind.com"  y contraseña "123456" validos
+   Then debere ingresar a la pantalla de home y mostrar mensaje de "Inicio"
+
