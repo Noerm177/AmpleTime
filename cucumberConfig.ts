@@ -13,16 +13,13 @@ export let config: Config = {
     capabilities: {
     browserName: 'chrome'
   },
-  specs: ['../features/demo.feature'],
+  specs: ['../features/userLogin.feature'],
   cucumberOpts: {
     // require step definitions
+    tags: "@credencialesCorrectas",
     require: [
       './stepDefinations/*.js' // accepts a glob
     ]
   }
-  //seleniumAddress: 'http://localhost:4444/wd/hub',
-
-  // You could set no globals to true to avoid jQuery '$' and protractor '$'
-  // collisions on the global namespace.
   
 };

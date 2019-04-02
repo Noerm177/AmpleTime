@@ -1,5 +1,4 @@
 import {browser, element, by, By, ExpectedConditions} from 'protractor';
-
 import { async } from "q";
 import { LoginPage } from './pageObjects/LoginPage';
 import { protractor } from 'protractor/built/ptor';
