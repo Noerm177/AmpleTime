@@ -10,7 +10,7 @@ setDefaultTimeout(60 * 1000);
 let logIn = new LoginPage();
 
 Given('Ingresare a la pagina', async ()=> { 
-    await browser.get('http://ec2-54-218-245-21.us-west-2.compute.amazonaws.com/login');    
+    await browser.get(logIn.urlInicio);    
   });
 
   When('Ingresare un {string} y {string} invalidos', async(string, string2) => {
@@ -32,9 +32,10 @@ Given('Ingresare a la pagina', async ()=> {
     })          
   });
 
-  Given('Ingresare a la pagina con credenciales validas', async ()=> {
-    await browser.get('http://ec2-54-218-245-21.us-west-2.compute.amazonaws.com/login');
-  });
+
+Given('Ingresare a la pagina con credenciales validas', async ()=> {
+  await browser.get(logIn.urlInicio);
+});
 
   When('Ingresare un usuario {string}  y contraseña {string} validos', async (string, string2) => {
     await logIn.userBox.clear().then(function() {

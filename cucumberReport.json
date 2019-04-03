@@ -1,0 +1,259 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Validar las credenciales de ingreso",
+    "line": 1,
+    "id": "validar-las-credenciales-de-ingreso",
+    "tags": [],
+    "uri": "features\\userLogin.feature",
+    "elements": [
+      {
+        "id": "validar-las-credenciales-de-ingreso;quiero-ingresar-credenciales-invalidas",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Quiero ingresar credenciales invalidas",
+        "tags": [
+          {
+            "name": "@credencialesInvalidas",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "stepDefinations\\hooks.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Ingresare a la pagina",
+            "match": {
+              "location": "stepDefinations\\loginSteps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30935000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "Ingresare un \"Noerm@abc.com\" y \"123456\" invalidos",
+            "match": {
+              "location": "stepDefinations\\loginSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 409000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Me mostrara 'Usuario y/o contraseña incorrectas, favor de verificar'",
+            "match": {
+              "location": "stepDefinations\\loginSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 465000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "stepDefinations\\hooks.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "validar-las-credenciales-de-ingreso;quiero-ingresar-credenciales-invalidas",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Quiero ingresar credenciales invalidas",
+        "tags": [
+          {
+            "name": "@credencialesInvalidas",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "stepDefinations\\hooks.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Ingresare a la pagina",
+            "match": {
+              "location": "stepDefinations\\loginSteps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2618000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "Ingresare un \"Noerm.123@Yopmail.com\" y \"Hola123\" invalidos",
+            "match": {
+              "location": "stepDefinations\\loginSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 576000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Me mostrara 'Usuario y/o contraseña incorrectas, favor de verificar'",
+            "match": {
+              "location": "stepDefinations\\loginSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 363000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "stepDefinations\\hooks.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "validar-las-credenciales-de-ingreso;quiero-ingresar-credenciales-validas",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Quiero ingresar credenciales validas",
+        "tags": [
+          {
+            "name": "@credencialesCorrectas",
+            "line": 14
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "stepDefinations\\hooks.ts:15"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "Ingresare a la pagina con credenciales validas",
+            "match": {
+              "location": "stepDefinations\\loginSteps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1541000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "Ingresare un usuario \"testomator@amplemind.com\"  y contraseña \"123456\" validos",
+            "match": {
+              "location": "stepDefinations\\loginSteps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 320000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "debere ingresar a la pantalla de home y mostrar mensaje de \"Inicio\"",
+            "match": {
+              "location": "stepDefinations\\loginSteps.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5813000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

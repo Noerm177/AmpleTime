@@ -16,7 +16,8 @@ export let config: Config = {
   specs: ['../features/userLogin.feature'],
   cucumberOpts: {
     // require step definitions
-    tags: "@credencialesCorrectas",
+    //tags: "@credencialesCorrectas",
+    format:'json:./cucumberReport.json',
     require: [
       './stepDefinations/*.js' // accepts a glob
     ]
