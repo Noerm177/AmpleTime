@@ -14,6 +14,6 @@ Feature: Validar las credenciales de ingreso
    @credencialesCorrectas
    Scenario: Quiero ingresar credenciales validas
    Given Ingresare a la pagina con credenciales validas
-   When  Ingresare un usuario "testomator@amplemind.com"  y contraseña "123456" validos
+   When  Ingresare un usuario "testomator@amplemind.com"  y contraseña "12345" validos
    Then debere ingresar a la pantalla de home y mostrar mensaje de "Inicio"
 

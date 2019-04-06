@@ -11,7 +11,6 @@ export class LoginPage
 
     constructor()
     {
-       
         this.urlInicio=('http://ec2-54-218-245-21.us-west-2.compute.amazonaws.com/login'); 
         this.userBox=element(by.xpath('//*[@id="mat-input-0"]'));
         this.passBox=element(by.id('mat-input-1'));

@@ -1,4 +1,4 @@
-import {After,Before} from "cucumber";
+import {After,Before, Status} from "cucumber";
 import {browser} from "protractor";
 
 
@@ -17,3 +17,12 @@ Before({tags: "@credencialesCorrectas"}, function () {
     console.log("Me executo primero");
 });
 
+After (async function (scenario) {
+  console.log("Test is completed");
+  if (scenario.result.status === Status.FAILED) {
+
+    const screenShot = await browser.takeScreenshot();  
+      this.attach(screenShot,"image/png");
+  }
+  
+})
