@@ -20,7 +20,7 @@ Before({tags: "@credencialesCorrectas"}, function () {
 
 After (async function (scenario) {
   console.log("Test is completed");
-  if (scenario.result.status === Status.PENDING) {
+  if (scenario.result.status === Status.PASSED) {
 
     const screenShot = await browser.takeScreenshot();  
       this.attach(screenShot,"image/png");

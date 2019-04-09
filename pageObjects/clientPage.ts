@@ -6,7 +6,9 @@ export class clientPage
     clientNew:ElementFinder;
     clientName:ElementFinder;
     clientDesc:ElementFinder;
+    clientMoneda:ElementFinder;
     clientSave:ElementFinder;
+    
 
 
     constructor()
@@ -16,7 +18,7 @@ export class clientPage
         this.clientName=element(by.css('input[formcontrolname=name]'));
         this.clientDesc=element(by.tagName('TEXTAREA'));
         this.clientSave=element(by.cssContainingText('span.mat-button-wrapper', 'Guardar'));
-
+        this.clientMoneda=element(by.css('.mat-select'));
 
     }
 }
