@@ -4,6 +4,7 @@ import { LoginPage } from '../pageObjects/LoginPage';
 import { browser, protractor } from "protractor";
 import { AssertionError } from "assert";
 import chai from "chai";
+
 var expect = chai.expect;
 var {setDefaultTimeout} = require('cucumber');
 setDefaultTimeout(60 * 1000);

@@ -8,16 +8,15 @@ export let config: Config = {
 
   framework: 'custom',
 
-
   frameworkPath: require.resolve('protractor-cucumber-framework'),
 
     capabilities: {
     browserName: 'chrome'
   },
-  specs: ['../features/userLogin.feature'],
+  specs: ['../features/client.feature'],
   cucumberOpts: {
 
-    //tags: "@credencialesCorrectas",
+    tags: "@ClienteNuevo",
     format:'json:./cucumberReport.json',
     require: [
       './stepDefinations/*.js' // accepts a glob
