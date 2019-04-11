@@ -7,6 +7,8 @@ export class clientPage
     clientName:ElementFinder;
     clientDesc:ElementFinder;
     clientMoneda:ElementFinder;
+    clientMonedaUSD:ElementFinder;
+    clientMonedaMXN:ElementFinder;
     clientSave:ElementFinder;
     
 
@@ -18,7 +20,11 @@ export class clientPage
         this.clientName=element(by.css('input[formcontrolname=name]'));
         this.clientDesc=element(by.tagName('TEXTAREA'));
         this.clientSave=element(by.cssContainingText('span.mat-button-wrapper', 'Guardar'));
-        this.clientMoneda=element(by.css('.mat-select'));
+        this.clientMoneda=element(by.css('#moneda-select .mat-select-trigger'));
+        //this.clientMoneda=element(by.id('moneda-field'));
+        //this.clientMoneda=element(by.css('div.mat-form-field-infix'));
+        //this.clientMonedaMXN=element(by.cssContainingText('span.mat-option-text', 'MXN'));
+
 
     }
 }

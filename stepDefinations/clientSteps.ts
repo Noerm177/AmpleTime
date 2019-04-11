@@ -2,9 +2,10 @@ import { Given, When, Then } from "cucumber";
 import { LoginPage } from '../pageObjects/LoginPage';
 import {clientPage} from '../pageObjects/clientPage';
 import { async } from "q";
-import { browser, Key, ExpectedConditions, element } from "protractor";
+import { browser, Key, ExpectedConditions, element, ActionSequence } from "protractor";
 import chai from "chai";
 
+var EC = ExpectedConditions;
 var expect = chai.expect;
 var {setDefaultTimeout} = require('cucumber');
 setDefaultTimeout(60 * 1000);
@@ -28,10 +29,12 @@ let client = new clientPage();
     
     await client.clientName.sendKeys(string1);
     await client.clientDesc.sendKeys(string2);
-    await browser.actions().mouseMove(client.clientMoneda).click();
-
+    //browser.actions().mouseMove(client.clientMoneda).click().perform();
+    await client.clientMoneda.click();
+    console.log(client.clientMoneda);
+    //await client.clientMoneda.click();
+    //await client.clientMonedaMXN.click();
     
-
   });
 
   When('Presione el boton guardar', async () => {
