@@ -31,9 +31,7 @@ let client = new clientPage();
     await client.clientDesc.sendKeys(string2);
     //browser.actions().mouseMove(client.clientMoneda).click().perform();
     await client.clientMoneda.click();
-    console.log(client.clientMoneda);
-    //await client.clientMoneda.click();
-    //await client.clientMonedaMXN.click();
+    await client.clientMonedaMXN.click();
     
   });
 

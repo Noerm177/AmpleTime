@@ -23,7 +23,7 @@ export class clientPage
         this.clientMoneda=element(by.css('#moneda-select .mat-select-trigger'));
         //this.clientMoneda=element(by.id('moneda-field'));
         //this.clientMoneda=element(by.css('div.mat-form-field-infix'));
-        //this.clientMonedaMXN=element(by.cssContainingText('span.mat-option-text', 'MXN'));
+        this.clientMonedaMXN=element(by.cssContainingText('span.mat-option-text', 'MXN'));
 
 
     }
