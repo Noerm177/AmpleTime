@@ -1,5 +1,4 @@
 import { Given, When, Then } from "cucumber";
-import { LoginPage } from '../pageObjects/LoginPage';
 import {clientPage} from '../pageObjects/clientPage';
 import { async } from "q";
 import { browser, Key, ExpectedConditions, element, ActionSequence } from "protractor";
@@ -9,13 +8,11 @@ var EC = ExpectedConditions;
 var expect = chai.expect;
 var {setDefaultTimeout} = require('cucumber');
 setDefaultTimeout(60 * 1000);
-let logIn = new LoginPage();
 let client = new clientPage();
 
+  Given('Entre al catalogo de clientes como admin', async () => {
 
-  Given('Entre al catalogo de clientes', async () => {
-    await browser.get(logIn.urlInicio);
-    await logIn.goLogin.click();
+    browser.wait(EC.presenceOf(client.clientMenu), 3000);
     await client.clientMenu.click();
   
   });
@@ -39,6 +36,8 @@ let client = new clientPage();
     await client.clientSave.click();
   });
 
-  Then('Un cliente sera creado', function () {
+  Then('Un cliente sera creado', async () =>{
+    await client.clientPager.click();
+    
     
   });

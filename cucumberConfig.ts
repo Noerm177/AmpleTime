@@ -1,5 +1,8 @@
-import {Config} from 'protractor';
+import {Config, browser, by} from 'protractor';
 import * as reporter from "cucumber-html-reporter";
+import { async } from 'q';
+var logIn = require('./pageObjects/LoginPage.js');
+//let logIn = new LoginPage();
 
 export let config: Config = {
 
@@ -10,10 +13,13 @@ export let config: Config = {
 
   frameworkPath: require.resolve('protractor-cucumber-framework'),
 
+  //baseUrl: 'http://ec2-54-218-245-21.us-west-2.compute.amazonaws.com/login',
+
     capabilities: {
     browserName: 'chrome'
   },
   specs: ['../features/client.feature'],
+
   cucumberOpts: {
 
     tags: "@ClienteNuevo",
@@ -21,6 +27,11 @@ export let config: Config = {
     require: [
       './stepDefinations/*.js' // accepts a glob
     ]
+  },
+  onPrepare: async ()=> {
+
+    await browser.get('http://ec2-54-218-245-21.us-west-2.compute.amazonaws.com/login', 5000);
+    await browser.findElement(by.cssContainingText('span.mat-button-wrapper', 'Iniciar sesión')).click();
   },
 
   onComplete: () =>{
