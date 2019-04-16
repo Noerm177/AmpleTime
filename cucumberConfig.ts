@@ -8,7 +8,6 @@ export let config: Config = {
 
   noGlobals: true,
   directConnect: true,
-
   framework: 'custom',
 
   frameworkPath: require.resolve('protractor-cucumber-framework'),
@@ -18,11 +17,13 @@ export let config: Config = {
     capabilities: {
     browserName: 'chrome'
   },
-  specs: ['../features/client.feature'],
+  specs: ['../features/client.feature',
+          '../features/company.feature'
+     ],
 
   cucumberOpts: {
 
-    tags: "@ClienteNuevo",
+    //tags: '@compañiaNueva , @ClienteNuevo',
     format:'json:./cucumberReport.json',
     require: [
       './stepDefinations/*.js' // accepts a glob

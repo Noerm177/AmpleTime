@@ -10,26 +10,23 @@ var {setDefaultTimeout} = require('cucumber');
 setDefaultTimeout(60 * 1000);
 let client = new clientPage();
 
-  Given('Entre al catalogo de clientes como admin', async () => {
 
+  Given('Entre al catalogo de clientes como admin', async () => {
     browser.wait(EC.presenceOf(client.clientMenu), 3000);
     await client.clientMenu.click();
-  
+    await client.clientPager.click();
   });
 
   When('Presione el boton de nuevo cliente', async () => {
-    await client.clientNew.click();
-    
+    await client.clientNew.click(); 
   });
 
-  When('Rellene el formulario de cliente los campos {string}, {string} y Moneda', async (string1, string2) => {
-    
+  When('Rellene el formulario de cliente los campos {string}, {string} y Moneda', async (string1, string2) => { 
     await client.clientName.sendKeys(string1);
     await client.clientDesc.sendKeys(string2);
     //browser.actions().mouseMove(client.clientMoneda).click().perform();
     await client.clientMoneda.click();
     await client.clientMonedaMXN.click();
-    
   });
 
   When('Presione el boton guardar', async () => {
@@ -37,7 +34,9 @@ let client = new clientPage();
   });
 
   Then('Un cliente sera creado', async () =>{
-    await client.clientPager.click();
-    
+    await client.clientListLast.getText().then(function(idCliente){
+      console.log("El ultimo cliente creado es:\n "+ idCliente);
+    });
+
     
   });

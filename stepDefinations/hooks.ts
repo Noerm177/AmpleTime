@@ -1,26 +1,15 @@
-import {After,Before, Status} from "cucumber";
+import {After,Before, Status, BeforeAll} from "cucumber";
 import {browser} from "protractor";
 import { LoginPage } from '../pageObjects/LoginPage';
 import { async } from "q";
 let logIn = new LoginPage;
 
 
-Before({tags: "@ClienteNuevo"}, async () => {
+BeforeAll({tags: "@ClienteNuevo, @compañiaNueva"}, async () => {
   // This hook will be executed before all scenarios
   await browser.manage().window().maximize();
 
 });
-/*
-After({tags: "@ClienteNuevo"}, function () {
-  browser.getCurrentUrl().then(
-    url=> {
-      if (url  != logIn.urlInicio)  {
-       browser.get(logIn.urlInicio);
-       logIn.goLogin.click();
-    }}
-  )
-  });
-
 /*
 Before({tags: "@credencialesCorrectas"}, function () {
   // This hook will be executed before scenarios tagged with @foo
