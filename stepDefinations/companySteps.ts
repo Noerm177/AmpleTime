@@ -8,6 +8,7 @@ let comp = new companyPage();
 
 Given('Entre al catalogo de compañia', async () =>{
     await comp.compMenu.click();
+    await comp.compPager.click();
     
   });
 
@@ -28,7 +29,10 @@ When('Rellene el formulario', async () => {
   });
 
 Then('Una compañia sera creada', async () => {
+    await browser.wait(EC.elementToBeClickable(comp.compPager), 3000);
+    await comp.compPager.click();
     await comp.compLast.getText().then(function(idCompnay){
-        console.log("La ultima compañia creada es:\n "+ idCompnay);
+        console.log("\nLa ultima compañia creada es:\n "+ idCompnay);
       });
+    
   });

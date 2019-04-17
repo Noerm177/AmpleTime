@@ -1,4 +1,4 @@
-@compañiaNueva
+@Catalogo_Compañias
 Feature: Validar la creacion de una compañia
     Validar que un usuario admin sea capaz de crear una compañia
 

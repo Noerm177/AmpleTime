@@ -13,6 +13,7 @@ export class companyPage
     compAdmin:ElementFinder;
     compSave:ElementFinder;
     compLast:ElementFinder;
+    compPager:ElementFinder;
 
 
     constructor()
@@ -26,6 +27,7 @@ export class companyPage
         this.compNumberUsers=element(by.css('input[formcontrolname=numberOfUsers'));
         this.compAdmin=element(by.css('input[formcontrolname=administrator'));
         this.compSave=element(by.cssContainingText('.mat-flat-button.mat-primary', ' Guardar '));
+        this.compPager=element(by.css('.catalog-pagination.ng-star-inserted li:nth-last-child(2)'));
         this.compLast=element(by.css('.catalog-table.mat-table mat-row:nth-last-child(1)'));
 
 

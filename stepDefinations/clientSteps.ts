@@ -35,8 +35,11 @@ let client = new clientPage();
 
   Then('Un cliente sera creado', async () =>{
     await client.clientListLast.getText().then(function(idCliente){
-      console.log("El ultimo cliente creado es:\n "+ idCliente);
+      console.log("\nEl ultimo cliente creado es:\n "+ idCliente);
     });
 
     
+
+
+
   });

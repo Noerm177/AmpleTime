@@ -5,7 +5,7 @@ import { async } from "q";
 let logIn = new LoginPage;
 
 
-BeforeAll({tags: "@ClienteNuevo, @compañiaNueva"}, async () => {
+BeforeAll({tags: "@Catalogo_Clientes, @Catalogo_Compañias"}, async () => {
   // This hook will be executed before all scenarios
   await browser.manage().window().maximize();
 
@@ -17,7 +17,7 @@ Before({tags: "@credencialesCorrectas"}, function () {
 });*/
 
 After (async function (scenario) {
-  console.log("Test is completed");
+  console.log("\nTest is completed\n");
   if (scenario.result.status === Status.PASSED) {
 
     const screenShot = await browser.takeScreenshot();  

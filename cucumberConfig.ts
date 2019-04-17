@@ -23,10 +23,11 @@ export let config: Config = {
 
   cucumberOpts: {
 
-    //tags: '@compañiaNueva , @ClienteNuevo',
+    //tags: ['@compañiaNueva , @ClienteNuevo'],
     format:'json:./cucumberReport.json',
     require: [
       './stepDefinations/*.js' // accepts a glob
+      
     ]
   },
   onPrepare: async ()=> {
@@ -44,12 +45,12 @@ export let config: Config = {
       reportSuiteAsScenarios: true,
       launchReport: true,
       metadata: {
-          "App Version":"0.3.2",
-          "Test Environment": "STAGING",
-          "Browser": "Chrome  54.0.2840.98",
+          "App Version":"Spring 3",
+          "Test Environment": "DEV",
+          "Browser": "Chrome  73.0.3683.103",
           "Platform": "Windows 10",
           "Parallel": "Scenarios",
-          "Executed": "Remote"
+          "Executed": "Local"
       }
   };
 

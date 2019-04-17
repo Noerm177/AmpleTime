@@ -10,6 +10,7 @@ export class clientPage
     clientMonedaUSD:ElementFinder;
     clientMonedaMXN:ElementFinder;
     clientSave:ElementFinder;
+    clientCancel:ElementFinder;
     clientPager:ElementFinder;
     clientListLast:ElementFinder;
     clientCount:ElementFinder;
@@ -21,6 +22,7 @@ export class clientPage
         this.clientName=element(by.css('input[formcontrolname=name]'));
         this.clientDesc=element(by.tagName('TEXTAREA'));
         this.clientSave=element(by.cssContainingText('span.mat-button-wrapper', 'Guardar'));
+        this.clientCancel=element(by.cssContainingText('span.mat-button-wrapper', ' Cancelar '));
         this.clientMoneda=element(by.css('#moneda-select .mat-select-trigger'));
         this.clientMonedaMXN=element(by.cssContainingText('span.mat-option-text', 'MXN'));
         this.clientMonedaUSD=element(by.cssContainingText('span.mat-option-text', 'USD'));
